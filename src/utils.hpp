@@ -33,7 +33,7 @@ float map(float value, float in_start, float in_end, float out_start, float out_
  * @param b second point
  * @return Point 
  */
-Point_T lerp(float t, Point_T a, Point_T b);
+point_t lerp(float t, point_t a, point_t b);
 
 
 /**
@@ -45,7 +45,7 @@ Point_T lerp(float t, Point_T a, Point_T b);
  * @param middle center point
  * @return current point at time t
  */
-Point_T bezier(float t, Point_T start, Point_T end, Point_T middle);
+point_t bezier(float t, point_t start, point_t end, point_t middle);
 
 /**
  * @brief bezier interpolation
@@ -57,4 +57,4 @@ Point_T bezier(float t, Point_T start, Point_T end, Point_T middle);
  * @param b second point
  * @return current point at time t
  */
-Point_T bezier(float t, Point_T start, Point_T end, Point_T a, Point_T b);
+point_t bezier(float t, point_t start, point_t end, point_t a, point_t b);

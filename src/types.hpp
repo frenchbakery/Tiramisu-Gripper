@@ -17,7 +17,7 @@ namespace Geometry
      * @brief a simple two dimensional point containing a x and a y value
      * 
      */
-    struct Point_T
+    struct point_t
     {
         float x;
         float y;
@@ -26,20 +26,20 @@ namespace Geometry
     /**
      * @brief simple two dimensional vector class
      */
-    class Vec2_T
+    struct vec2_t
     {
         private:
             float d;
             float l;
         
-            Point_T p;
+            point_t p;
 
         void recalculate(int from);
 
         public:
-            Vec2_T(float angle, float length);
-            Vec2_T(const Point_T &c);
-            Vec2_T();
+            vec2_t(float angle, float length);
+            vec2_t(const point_t &c);
+            vec2_t();
 
             // polar stuff
             float length();
@@ -54,12 +54,12 @@ namespace Geometry
              * 
              * @return Point 
              */
-            const Point_T &cartesian();
+            const point_t &cartesian();
 
             /**
              * @brief set the cartesian form of the vector (x, y)
              */
-            void setCartesian(Point_T value);
+            void setCartesian(point_t value);
 
             float x();
             void setX(float value);

@@ -23,15 +23,19 @@ int main()
 
     // tests
     float curr_val;
-    for (;;)
-    {
-        std::cout << "servo value (cm): ";
-        std::cout.flush();
-        std::cin >> curr_val;
-        std::cout << "\n";
+    std::cout << "servo value (cm): ";
+    std::cout.flush();
+    std::cin >> curr_val;
+    std::cout << "\n";
 
-        gripper.setClawPositionCm(curr_val);
-    }
+    gripper.setClawPositionCm(curr_val);
+
+    msleep(1000);
+
+    gripper.grabUntilEnd();
+
+    msleep(3000);
+    gripper.release(200, 2);
 
     return 0;
 }

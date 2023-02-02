@@ -12,7 +12,7 @@ using namespace Geometry;
 
 
 // private
-void Vec2_T::recalculate(int from)
+void vec2_t::recalculate(int from)
 {
     switch (from)
     {
@@ -34,84 +34,84 @@ void Vec2_T::recalculate(int from)
 
 
 // public
-Vec2_T::Vec2_T(float angle, float length)
+vec2_t::vec2_t(float angle, float length)
     : d(angle), l(length)
 {
     // recalculate x and y values
     recalculate(1);
 }
 
-Vec2_T::Vec2_T(const Point_T &c)
+vec2_t::vec2_t(const point_t &c)
     : p(c)
 {
     // recalculate length and angle
     recalculate(0);
 }
 
-Vec2_T::Vec2_T()
+vec2_t::vec2_t()
     : d(0), l(0)
 {
-    Point_T p;
+    point_t p;
     p.x = 0;
     p.y = 0;
 };
 
 
 // property getters and setters
-float Vec2_T::length()
+float vec2_t::length()
 {
     return l;
 }
 
-void Vec2_T::setLength(float value)
+void vec2_t::setLength(float value)
 {
     l = value;
     recalculate(1);
 }
 
 
-float Vec2_T::angle()
+float vec2_t::angle()
 {
     return d;
 }
 
-void Vec2_T::setAngle(float value)
+void vec2_t::setAngle(float value)
 {
     d = value;
     recalculate(1);
 }
 
 
-const Point_T &Vec2_T::cartesian()
+const point_t &vec2_t::cartesian()
 {
     return p;
 }
 
-void Vec2_T::setCartesian(Point_T value)
+void vec2_t::setCartesian(point_t value)
 {
     p = value;
     recalculate(0);
 }
 
 
-float Vec2_T::x()
+float vec2_t::x()
 {
     return p.x;
 }
 
-void Vec2_T::setX(float value)
+void vec2_t::setX(float value)
 {
     p.x = value;
     recalculate(0);
 }
 
 
-float Vec2_T::y()
+float vec2_t::y()
 {
     return p.y;
 }
 
-void Vec2_T::setY(float value)
+void vec2_t::setY(float value)
 {
     p.y = value;
     recalculate(0);
